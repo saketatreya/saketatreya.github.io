@@ -1,0 +1,49 @@
+@import url('style.css');
+
+.blog {
+    margin: 20px auto;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.blog:hover {
+    transform: scale(1.02);
+}
+
+.blog-title {
+    color: #333;
+    cursor: pointer;
+}
+
+.blog-content {
+    text-align: justify;
+}
+
+.like-button, .comment-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.like-button:hover, .comment-button:hover {
+    background-color: #0056b3;
+}
+
+.comments-section, .likes-section {
+    margin-top: 20px;
+}
+
+.comment {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
