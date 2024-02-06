@@ -1,0 +1,333 @@
+ body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%; /* Ensure body takes full viewport height */
+}
+
+body {
+    background-size: cover; /* Cover the entire page */
+    overflow: hidden;
+} 
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px); /* Adjust the px value to control the amount of blur */
+    background-color: rgba(255, 255, 255, 0.4); /* Light theme overlay */
+    z-index: -1; /* Make sure this is below text content but above the background */
+}
+
+.dark-theme .background-overlay {
+    background-color: rgba(241, 241, 241, 0.4); /* Dark theme overlay */
+}
+
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar a, .navbar .website-name {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.website-name {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 20px;
+}
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    margin-right: 30px; /* Add this margin for proper alignment */
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.theme-switch input {
+    display:none;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .1s;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+
+input:checked + .slider {
+    background-color: #66bb6a;
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Rest of your styles remain the same */
+
+/* Additional styles for Light and Dark Themes */
+.light-theme {
+    color: #000;
+    background-color: #87CEEB;
+}
+
+.dark-theme {
+    color: #fff;
+    background-color: #333;
+}
+
+body.transition {
+    transition: background-image 0.5s ease-in-out;
+}
+
+.background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    object-fit: cover;
+}
+
+
+/* Ensure content doesn't hide under the navbar */
+.container {
+    padding-top: 60px; /* Adjust based on the navbar's height */
+}
+
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(50px); /* Apply blur effect */
+    z-index: 1; /* Ensure overlay is above the background but below the content */
+}
+
+
+
+.container {
+    position: relative; /* Ensure container is positioned relative to overlay */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    z-index: 2; /* Ensure content is above the overlay */
+}
+
+
+section {
+    margin-bottom: 20px;
+}
+
+section h1, section p {
+    color: #fff; /* Example for light text */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adjust as necessary */
+}
+
+
+.profile-img {
+    width: 100px; /* Adjust based on preference */
+    height: 100px; /* Maintain aspect ratio */
+    border-radius: 50%;
+    transform: scale(1);
+    transition: transform 0.5s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.1);
+}
+
+.skills-container {
+    display: flex;
+    gap: 10px;
+}
+
+.skill {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    transition: transform 0.5s ease;
+}
+
+.skill:hover {
+    transform: translateY(-10px);
+}
+
+@media (max-width: 768px) {
+    .skills-container {
+        flex-direction: column;
+    }
+}
+
+body {
+    transition: background-color 0.5s ease-in-out, background-image 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+/* Light theme styles */
+.light-theme {
+    color: #0000EE; /* Dark text for light background */
+    /* Define other light theme styles if necessary */
+}
+
+/* Dark theme styles */
+.dark-theme {
+    color: #add8e6; /* Light text for dark background */
+    /* Define other dark theme styles if necessary */
+}
+
+/* Adjust link colors for better visibility */
+a {
+    transition: color 0.5s ease-in-out;
+}
+
+.light-theme {
+    color: #0000EE; /* Dark text for light background */
+    background-color: #87CEEB; /* Assuming you want a specific background color or image */
+}
+
+.dark-theme {
+    color: #ADD8E6; /* Light text for dark background */
+    background-color: #333; /* Assuming you want a specific background color or image */
+}
+
+/* Background images for themes */
+body.light-theme {
+    background-image: url('light.webm'); /* Update with your actual background image */
+}
+
+body.dark-theme {
+    background-image: url('dark.webm'); /* Update with your actual background image */
+}
+
+
+video#backgroundVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.about {
+    font-family: Arial, sans-serif; /* Ensures consistency in font usage */
+    line-height: 1.6; /* Improves readability */
+}
+
+.about h1 {
+    color: #333; /* Professional, yet distinct color for headings */
+}
+
+.passion {
+    color: #007bff; /* Highlights passions with a vibrant color */
+    font-weight: bold; /* Emphasizes key interests */
+}
+
+.highlight {
+    background-color: #ff0; /* Adds a subtle highlight to important elements */
+    padding: 2px 5px; /* Ensures the highlight doesn't crowd the text */
+    border-radius: 5px; /* Softens the edges of the highlight for a modern look */
+}
+
+.goal {
+    font-style: italic; /* Italicizes goals to differentiate them from the rest of the text */
+    font-weight: bold; /* Further emphasizes the importance of the goal */
+    color: #28a745; /* A green shade that conveys growth and goals */
+}
+
+.profile-img {
+    border-radius: 50%; /* Circular profile images are engaging and modern */
+    width: 100px; /* Adjust size as needed */
+    height: auto; /* Maintains aspect ratio */
+    border: 3px solid #333; /* Adds a professional border around the image */
+}
+
+/* Optional: Add more decorative elements or animations as desired */
+
+.site-footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+}
+
+.social-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #66bb6a;
+}

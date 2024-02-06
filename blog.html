@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page</title>
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <div class="website-name">Saket Atreya</div>
+        <a href="blog.html">Blog</a>
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+            </label>
+        </div>
+    </nav>
+
+    <div class="blog" id="blog1">
+        <h2 class="blog-title" data-url="blog1.html">Blog Title 1</h2>
+        <p>This is the first blog post.</p>
+        <button class="like-button" data-blog-id="blog1">Like</button> <span class="likes-count">0</span> Likes
+        <div>
+            <input type="text" id="commentInput-blog1" placeholder="Add a comment">
+            <button class="comment-button" data-blog-id="blog1">Comment</button>
+        </div>
+        <ul class="comments-section"></ul>
+    </div>
+
+    <div class="blog" id="blog2">
+        <h2 class="blog-title" data-url="blog2.html">Blog Title 2</h2>
+        <p>This is the second blog post.</p>
+        <button class="like-button" data-blog-id="blog2">Like</button> <span class="likes-count">0</span> Likes
+        <div>
+            <input type="text" id="commentInput-blog2" placeholder="Add a comment">
+            <button class="comment-button" data-blog-id="blog2">Comment</button>
+        </div>
+        <ul class="comments-section"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+<footer class="site-footer">
+    <div class="footer-content">
+        <p>Connect with us:</p>
+        <ul class="social-links">
+            <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+            <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+            <li><a href="https://instagram.com/saketatreya" target="_blank">Instagram</a></li>
+            <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+        </ul>
+    </div>
+</footer>
+
+</html>
