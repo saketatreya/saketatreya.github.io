@@ -8,23 +8,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="background-overlay"></div> <!-- Add this line -->
-    <video autoplay muted loop id="backgroundVideo" class="background-video"></video>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <a href="index.html">Home</a>
-        <div class="website-name">Saket Atreya</div>
-        <a href="blog.html">Blog</a>
-        <!-- Toggle Switch for Light/Dark Mode -->
-        <div class="theme-switch-wrapper">
-            <label class="theme-switch" for="checkbox">
-                <input type="checkbox" id="checkbox" />
-                <div class="slider round"></div>
-            </label>
-        </div>        
-    </nav>
+    <div class="content-wrap"> <!-- Wrap all content except the footer -->
+        <video autoplay muted loop id="backgroundVideo" class="background-video"></video>
+       
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <div class="website-name">Saket Atreya</div>
+            <a href="blog.html">Blog</a>
+            
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+                </label>
+            </div>        
+        </nav>
 
-    <div class="container">
+        <div class="container">
         <section class="about" id="about">
             <br>
             <br>
@@ -45,7 +45,7 @@
             <ul>
                 <li>lmao</li>
                 <li>lol</li>
-                <!-- Add more achievements as needed -->
+                <li>chillin like the illest villian</li>
             </ul>
         </section>
         
@@ -60,20 +60,27 @@
             </div>
         </section>
     </div>
+    
 
     <script src="script.js"></script>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>Connect with me:</p>
+            <ul class="social-links">
+                <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+                <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                <li><a href="https://instagram.com/saketatreya" target="_blank">Instagram</a></li>
+                <li><a href="https://github.com/saketatreya" target="_blank">GitHub</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    
 </body>
 
-<footer class="site-footer">
-    <div class="footer-content">
-        <p>Connect with us:</p>
-        <ul class="social-links">
-            <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
-            <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
-            <li><a href="https://instagram.com/saketatreya" target="_blank">Instagram</a></li>
-            <li><a href="https://github.com/saketatreya" target="_blank">LinkedIn</a></li>
-        </ul>
-    </div>
-</footer>
+<script src="script.js"></script>
+
+
 
 </html>

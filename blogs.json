@@ -1,0 +1,19 @@
+[
+    {
+      "id": "blog1",
+      "title": "Blog Title 1",
+      "url": "blog1.html",
+      "content": "This is the first blog post.",
+      "likes": 0,
+      "comments": []
+    },
+    {
+      "id": "blog2",
+      "title": "Blog Title 2",
+      "url": "blog2.html",
+      "content": "This is the second blog post.",
+      "likes": 0,
+      "comments": []
+    }
+  ]
+  

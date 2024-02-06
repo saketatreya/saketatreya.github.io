@@ -5,25 +5,12 @@
     height: 100%; /* Ensure body takes full viewport height */
 }
 
+
+
 body {
     background-size: cover; /* Cover the entire page */
     overflow: hidden;
 } 
-
-.background-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(10px); /* Adjust the px value to control the amount of blur */
-    background-color: rgba(255, 255, 255, 0.4); /* Light theme overlay */
-    z-index: -1; /* Make sure this is below text content but above the background */
-}
-
-.dark-theme .background-overlay {
-    background-color: rgba(241, 241, 241, 0.4); /* Dark theme overlay */
-}
 
 
 /* Navbar Styling */
@@ -140,16 +127,6 @@ body.transition {
 }
 
 
-.background-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(50px); /* Apply blur effect */
-    z-index: 1; /* Ensure overlay is above the background but below the content */
-}
-
 
 
 .container {
@@ -211,6 +188,18 @@ body {
     transition: background-color 0.5s ease-in-out, background-image 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
+.body, .content-wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content-wrap {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Light theme styles */
 .light-theme {
     color: #0000EE; /* Dark text for light background */
@@ -266,7 +255,7 @@ video#backgroundVideo {
 }
 
 .about h1 {
-    color: #333; /* Professional, yet distinct color for headings */
+    color: #958c8c; /* Professional, yet distinct color for headings */
 }
 
 .passion {
@@ -300,9 +289,9 @@ video#backgroundVideo {
     color: #fff;
     text-align: center;
     padding: 20px 0;
-    position: relative;
-    bottom: 0;
     width: 100%;
+    text-align: center;
+    margin-top: auto;
 }
 
 .footer-content {
@@ -324,7 +313,7 @@ video#backgroundVideo {
 
 .social-links a {
     color: #fff;
-    text-decoration: none;
+    text-decoration:lemonchiffon;
     transition: color 0.3s ease;
 }
 
